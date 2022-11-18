@@ -21,6 +21,12 @@ Cuisine.init(
 
      },
     },
+    {
+    sequelize,
+    freezeTableName: true,
+    underscored: true,
+    modelName: "Cuisine",
+    }
    );
 
 module.exports = Cuisine;
