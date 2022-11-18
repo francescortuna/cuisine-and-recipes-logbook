@@ -1,6 +1,7 @@
-const { Model, DataTypes } = require('sequalize');
+const { Model, DataTypes } = require("sequalize");
 const sequalize = require('../config/connection');
 
+class Cuisine extends Model { }
 
 Cuisine.init(
     {
@@ -8,7 +9,7 @@ Cuisine.init(
        type: DataTypes.INTEGER,
        allowNull: false,
        primaryKey: true,
-
+       autoIncrement: true,
      },
       name: {
        type: DataTypes.STRING,
@@ -22,4 +23,4 @@ Cuisine.init(
     },
    );
 
-Model.exports = Cuisine;
+module.exports = Cuisine;
