@@ -1,0 +1,26 @@
+const { Model, DataTypes } = require("sequalize");
+const sequalize = require('../config/connection');
+
+class Cuisine extends Model { }
+
+Cuisine.init(
+    {
+      id: {
+       type: DataTypes.INTEGER,
+       allowNull: false,
+       primaryKey: true,
+       autoIncrement: true,
+     },
+      name: {
+       type: DataTypes.STRING,
+       allowNull: false,  
+     },
+      description: {
+       type: DataTypes.STRING,
+       allowNull: false,
+
+     },
+    },
+   );
+
+module.exports = Cuisine;
