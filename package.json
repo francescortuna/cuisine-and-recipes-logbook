@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "dotenv": "^16.0.3",
     "bcrypt": "^5.1.0",
     "sequelize": "^6.25.6"
   }
