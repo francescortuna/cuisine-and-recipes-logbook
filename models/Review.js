@@ -18,7 +18,6 @@ Review.init(
         {
             type: DataTypes.STRING,
             allowNull: false,
-            primaryKey: true,
             autoIncrement: true,
         },
 
@@ -26,15 +25,13 @@ Review.init(
         {
             type: DataTypes.INTEGER,
             allowNull: false,
-            primaryKey: true,
             autoIncrement: true,
         },
 
         reviewDecription:
         {
             type: DataTypes.TEXT,
-            allowNull: false,
-            primaryKey: true,
+            allowNull: true,
             autoIncrement: true,
         },
 
