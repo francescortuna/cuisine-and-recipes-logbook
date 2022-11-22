@@ -18,21 +18,18 @@ Review.init(
         {
             type: DataTypes.STRING,
             allowNull: false,
-            autoIncrement: true,
         },
 
         reviewerScore:
         {
             type: DataTypes.INTEGER,
             allowNull: false,
-            autoIncrement: true,
         },
 
         reviewDecription:
         {
             type: DataTypes.TEXT,
             allowNull: true,
-            autoIncrement: true,
         },
 
         recipe_id: 

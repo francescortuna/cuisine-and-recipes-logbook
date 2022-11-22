@@ -23,6 +23,10 @@ Recipe.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    recipie_instructions: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    },
     cuisine_id: {
       type: DataTypes.INTEGER,
       references: {
