@@ -2,9 +2,9 @@ const { Model, DataTypes } = require("sequelize");
 const sequelize = require('../config/connection');
 
 
-class Reviews extends Model { }
+class Review extends Model { }
 
-Reviews.init(
+Review.init(
      {
         id: 
         {
@@ -55,4 +55,4 @@ Reviews.init(
     }
     );
 
-    module.exports = Reviews;
+    module.exports = Review;
