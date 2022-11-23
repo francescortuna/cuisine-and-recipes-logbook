@@ -23,7 +23,7 @@ Recipe.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    recipie_instructions: {
+    recipe_instructions: {
       type: DataTypes.TEXT,
       allowNull: false,
     },
