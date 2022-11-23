@@ -8,11 +8,10 @@ router.get('/', async (req, res) => {
 
     // Serialize data so the template can read it
     //const cuisines = cuisineData.map((cuisine) => cuisine.get({ plain: true }));
-    //res.render('cuisine', { cuisines });
-
-    res.render('homepage', {
-      loggedIn: req.session.loggedIn
-    });
+    // res.render('cuisine', { 
+    //   cuisines,
+    //   loggedIn: req.session.loggedIn
+    // });
 
     res.status(200).json(cuisineData);
 
@@ -31,11 +30,10 @@ router.get('/recipes/:id', async (req, res) => {
 
     // Serialize data so the template can read it
     //const cuisine = cuisineData.get({ plain: true });
-    //res.render('cuisine-recipes', { cuisine });
-
-    res.render('homepage', {
-      loggedIn: req.session.loggedIn
-    });
+    //res.render('cuisine-recipes', { 
+    //  cuisine,
+    // loggedIn: req.sesion.loggedIn 
+    //});
   } catch (err) {
     res.status(500).json(err);
   }
