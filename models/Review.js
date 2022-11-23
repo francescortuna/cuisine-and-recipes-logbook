@@ -14,19 +14,19 @@ Review.init(
             autoIncrement: true,    
         },
 
-        reviewerName:
+        reviewer_name:
         {
             type: DataTypes.STRING,
             allowNull: false,
         },
 
-        reviewerScore:
+        reviewer_score:
         {
             type: DataTypes.INTEGER,
             allowNull: false,
         },
 
-        reviewDecription:
+        review_description:
         {
             type: DataTypes.TEXT,
             allowNull: true,
@@ -39,13 +39,13 @@ Review.init(
               model: "recipe",
               key: "id",
             },
-          },
         },
+      },
     {
         sequelize,
         freezeTableName: true,
         underscored: true,
-        modelName: "Review",
+        modelName: "review",
     }
     );
 

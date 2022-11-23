@@ -29,7 +29,7 @@ Cuisine.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: "Cuisine",
+    modelName: "cuisine",
     }
    );
 

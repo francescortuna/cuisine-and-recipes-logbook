@@ -39,7 +39,7 @@ Recipe.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: "Recipe",
+    modelName: "recipe",
   }
 );
 
