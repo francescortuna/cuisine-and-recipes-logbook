@@ -10,6 +10,10 @@ router.get('/', async (req, res) => {
     //const cuisines = cuisineData.map((cuisine) => cuisine.get({ plain: true }));
     //res.render('cuisine', { cuisines });
 
+    res.render('homepage', {
+      loggedIn: req.session.loggedIn
+    });
+
     res.status(200).json(cuisineData);
 
   } catch (err) {
@@ -29,18 +33,20 @@ router.get('/recipes/:id', async (req, res) => {
     //const cuisine = cuisineData.get({ plain: true });
     //res.render('cuisine-recipes', { cuisine });
 
-    res.status(200).json(cuisineData);
+    res.render('homepage', {
+      loggedIn: req.session.loggedIn
+    });
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
 router.get('/login', (req, res) => {
-  if (req.session.logged_in) {
-    alarm("You already logged in");
+  if (req.session.loggedIn) {
+    res.redirect('/'); // Redirects to home/cuisine page if user is logged in
     return;
   }
-  res.render('/login');
+  res.render('login');
 });
 
 module.exports = router;
