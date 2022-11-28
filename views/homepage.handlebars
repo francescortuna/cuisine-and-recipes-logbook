@@ -97,4 +97,18 @@
         </div>
       </div>
 
+<div class="container">
+  <div class="row">
+    {{#each cuisines as |cuisine|}}
+      <a href="/cuisine/{{cuisine.id}}">
+        <div>
+          <p>
+            {{cuisine.name}}
+          </p>
+        </div>
+      </a>
+    {{/each}}
+  </div>
+</div>
+
       <script src="/public/js/homepage.js"></script>

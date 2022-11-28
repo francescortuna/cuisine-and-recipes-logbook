@@ -25,17 +25,35 @@ router.get('/', async (req, res) => {
 //Get all recipes for a given cuisine id
 router.get('/cuisine/:id', async (req, res) => {
   try {
-    const cuisineData = await Cuisine.findByPk(req.params.id, {
-      include: [{ model: Recipe }],
-    });
+    const cuisineData = await Cuisine.findByPk(req.params.id);
+    const cuisine = cuisineData.get({ plain: true });
+    
+    const recipeData = await Recipe.findAll(
+      {
+      where: {
+        cuisine_id: req.params.id
+      }
+      },
+      {
+        include: [
+          {
+            model: Cuisine,
+            attribute: ['name']
+          }
+        ]
+      }
+    );
 
     // Serialize data so the template can read it
-    const cuisine = cuisineData.get({ plain: true });
+    const recipes = recipeData.map((recipe) => recipe.get({ plain: true }));
     res.render('recipe', { 
       cuisine,
+      recipes,
       logged_in: req.session.logged_in,
       user_id: req.session.user_id
     }); 
+    //res.status(200).json(recipeData);
+
   } catch (err) {
     res.status(500).json(err);
   }
