@@ -59,6 +59,21 @@ router.get('/cuisine/:id', async (req, res) => {
   }
 });
 
+router.get('/review/:id', async (req, res) => {
+  try {
+    const recipeData = await Recipe.findByPk(req.params.id);
+    const recipe = recipeData.get({ plain: true });
+    res.render("review", {
+      recipe, 
+      logged_in: req.session.logged_in,
+      user_id: req.session.user_id,
+    })
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
     res.redirect('/'); // Redirects to home/cuisine page if user is logged in
