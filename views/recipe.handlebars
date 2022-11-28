@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 text-center">
+      <h2>{{cuisine.name}} Recipes</h2>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    {{#each recipes as |recipe|}}
+      <div class="col-6">
+  <!-- display recipe in a card -->
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title text-center">{{recipe.name}}</h4>
+              <p class="card-text"><strong>Recipe time:</strong>{{recipe.time}}</p>
+              <p class="card-text"><strong>Ingredients:</strong> {{recipe.ingredients}}</p>
+              <p class="card-text"><strong>Instructions:</strong> {{recipe.instructions}}</p>
+              <a href="/review/{{recipe.id}}" class="btn btn-primary">Review recipe</a>
+            </div>
+          </div>
+      </div>
+    {{/each}}
+  </div>
+</div>

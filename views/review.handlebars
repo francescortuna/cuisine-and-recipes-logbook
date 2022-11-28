@@ -1,0 +1,47 @@
+<div class="row justify-content-center">
+  <div class="col-6">
+    <!-- display recipe in a card -->
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title text-center">{{recipe.name}}</h4>
+        <p class="card-text"><strong>Recipe time:</strong>{{recipe.time}}</p>
+        <p class="card-text"><strong>Ingredients:</strong> {{recipe.ingredients}}</p>
+        <p class="card-text"><strong>Instructions:</strong> {{recipe.instructions}}</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <p>
+          <form class="form review-recipe-form">
+            <div class="form-group">
+              <label for="reviewer-name">Reviewer name</label>
+              <input type="text" id="reviewer-name" class="form-input" name="reviewer-name"/>
+            </div>
+            <div class="form-group">
+              <label for="recipe-score">Score</label>
+              <select id="recipe-score" class="form-select" name="recipe-score">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10" selected>10</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="review-content">Review Content</label>
+              <textarea id="review-content" class="form-textarea" name="revew-content" data-id="{{recipe.id}}"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Review</button>
+          </form>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/js/recipeReview.js"></script>
