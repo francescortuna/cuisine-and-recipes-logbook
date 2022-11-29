@@ -6,12 +6,12 @@
     </div>
   <div class="row justify-content-center">
     {{#each cuisines as |cuisine|}}
+     <a href="/cuisine/{{cuisine.id}}"></a>
       <div class="col-6">
         <div class="card">
           <div class="card-body">
             <h4 class="card-title text-center">{{cuisine.name}}</h4>
             <p class="card-text"><strong>Description:</strong>{{cuisine.description}}</p>
-            <a href="/views/recipe.handlebars" class="btn btn-primary">View Recipes!</a>
           </div>
         </div>
       </div>
