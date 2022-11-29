@@ -1,0 +1,20 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2>Which cuisine would you like to cook?</h2>
+      </div>
+    </div>
+  <div class="row justify-content-center">
+    {{#each cuisines as |cuisine|}}
+      <div class="col-6">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title text-center">{{cuisine.name}}</h4>
+            <p class="card-text"><strong>Description:</strong>{{cuisine.description}}</p>
+            <a href="/views/recipe.handlebars" class="btn btn-primary">View Recipes!</a>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>
