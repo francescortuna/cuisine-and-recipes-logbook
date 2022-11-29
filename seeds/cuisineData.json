@@ -1,15 +1,18 @@
 [
     {
         "name": "Mexican",
-        "description": "Fine recipies from Mexico. Often use fresh herbs vegtables and Citrus and a combination of earthy and savory flavors"
+        "description": "Fine recipies from Mexico. Often use fresh herbs vegtables and Citrus and a combination of earthy and savory flavors",
+        "filename": "Mexicanlogo.png"
     },
     {
         "name": "Italian",
-        "description": "Mostly consisting of pasta fish fruits and veggies these recipies come from the boot of italy! theyre sure not to dissapoint!"
+        "description": "Mostly consisting of pasta fish fruits and veggies these recipies come from the boot of italy! theyre sure not to dissapoint!",
+        "filename": "Italianlogo.png"
     },
     {
         "name": "Chinese",
-        "description": "often complimenting seasonal ingredients these dishes based on rice soup and a few others have amazing flavors thatll keep ypu coming back for more!"
+        "description": "often complimenting seasonal ingredients these dishes based on rice soup and a few others have amazing flavors thatll keep ypu coming back for more!",
+        "filename": "Chinese.png"
     }
 
 ]

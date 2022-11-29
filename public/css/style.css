@@ -24,16 +24,18 @@ form .form-textarea {
   width: 100%;
 }
 
+.cuisine {
+  margin: 5px;
+}
+
 .cuisine a {
   text-decoration: none;
   color:black;
-  margin: 5px;
-  
 }
 
 .cuisine-image {
   width: 100%;
-  height: 200px;
+  height: 300px;
 }
 
 
