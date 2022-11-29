@@ -1,8 +1,10 @@
 const router = require('express').Router();
 const { Cuisine, Recipe } = require('../models');
 
+const withAuth = require("../../utils/auth");
+
 //Get all Cuisines
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   try {
     const cuisineData = await Cuisine.findAll();
 
@@ -23,7 +25,7 @@ router.get('/', async (req, res) => {
 });
 
 //Get all recipes for a given cuisine id
-router.get('/cuisine/:id', async (req, res) => {
+router.get('/cuisine/:id', withAuth, async (req, res) => {
   try {
     const cuisineData = await Cuisine.findByPk(req.params.id);
     const cuisine = cuisineData.get({ plain: true });
@@ -59,7 +61,7 @@ router.get('/cuisine/:id', async (req, res) => {
   }
 });
 
-router.get('/review/:id', async (req, res) => {
+router.get('/review/:id', withAuth, async (req, res) => {
   try {
     const recipeData = await Recipe.findByPk(req.params.id);
     const recipe = recipeData.get({ plain: true });
