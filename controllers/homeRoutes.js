@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Cuisine, Recipe } = require('../models');
 
-const withAuth = require("../../utils/auth");
+const withAuth = require("../utils/auth");
 
 //Get all Cuisines
 router.get('/', withAuth, async (req, res) => {
