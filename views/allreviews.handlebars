@@ -7,7 +7,7 @@
       <p class="card-text"><strong>Reviewer name: </strong>{{review.reviewer_name}}</p>
       <p class="card-text"><strong>Description:</strong>
         {{review.review_description}}</p>
-      <p class="card-text">Reviewed {{review.createdAt}}</p>
+      <p class="card-text">Reviewed {{format_time review.createdAt}}</p>
     </div>
   </div>
   {{/each}}
