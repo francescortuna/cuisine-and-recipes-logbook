@@ -108,6 +108,16 @@ router.get('/allreviews/:id', withAuth, async (req,res) => {
   }
 });
 
+
+router.get("/addrecipe", withAuth, (req, res) => {
+  if (req.session.logged_in) {
+    res.render("addrecipe", {
+      logged_in: req.session.logged_in,
+      user_id: req.session.user_id,
+    });
+  }
+});
+
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
     res.redirect('/'); // Redirects to home/cuisine page if user is logged in
