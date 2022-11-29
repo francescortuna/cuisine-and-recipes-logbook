@@ -27,10 +27,21 @@ Recipe.init(
       type: DataTypes.TEXT,
       allowNull: false,
     },
+    filename: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
     cuisine_id: {
       type: DataTypes.INTEGER,
       references: {
         model: "cuisine",
+        key: "id",
+      },
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "user",
         key: "id",
       },
     },
