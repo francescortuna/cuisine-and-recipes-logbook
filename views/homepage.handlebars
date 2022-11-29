@@ -1,3 +1,31 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 text-center">
+      <h2>Famous Cuisines</h2>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    {{#each cuisines as |cuisine|}}
+      <div class="col-6 cuisine">
+        <!-- display recipe in a card -->
+        <a href="/cuisine/{{cuisine.id}}">
+          <div class="card">
+            <img class="card-img-top cuisine-image" src="/images/LOGO.png" alt="{{cuisine.name}} image">
+            <div class="card-body">
+              <h4 class="card-title text-center">{{cuisine.name}}</h4>
+              <p class="card-text"><strong>Description:</strong>{{cuisine.description}}</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    {{/each}}
+  </div>
+</div>
+
+
+
+
+
 <!--
 <nav class="navbar bg-light">
   <div class="container-fluid">
@@ -26,7 +54,7 @@
       </nav> -->
        <!--<div class="card" style="width: 18rem;"> -->
         <!--card 1-->
-
+<!--
         <div class="card mb-3" style="max-width: 540px;">
             <div class="row g-0">
              <div class="col-md-4">
@@ -49,9 +77,10 @@
         </div>
       </div>
       </div>
-      </div>
+      </div> -->
      
      <!--card2-->
+     <!--
      <div class="card mb-3" style="max-width: 540px;">
         <div class="row g-0">
          <div class="col-md-4">
@@ -75,8 +104,9 @@
       </div>
       </div>
       </div>
-     
+     -->
      <!--card3-->
+     <!--
         <div class="card mb-3" style="max-width: 540px;">
         <div class="row g-0">
          <div class="col-md-4">
@@ -98,7 +128,9 @@
           <a href="#" class="card-link">"Link</a>
         </div>
       </div>
+-->
 
+<!--
 <div class="container">
   <div class="row">
     {{#each cuisines as |cuisine|}}
@@ -112,6 +144,6 @@
     {{/each}}
   </div>
 </div>
-
+-->
       <script src="/public/js/homepage.js"></script>
       <script src="/public/js/logout.js"></script>

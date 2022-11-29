@@ -18,6 +18,18 @@ form .form-textarea {
   width: 100%;
 }
 
+.cuisine a {
+  text-decoration: none;
+  color:black;
+  margin: 5px;
+  
+}
+
+.cuisine-image {
+  width: 100%;
+  height: 200px;
+}
+
 #login-card,
 #signup-card {
     width: 65%;
