@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Cuisine, Recipe } = require('../models');
+const { Cuisine, Recipe, Review } = require('../models');
 
 const withAuth = require("../utils/auth");
 
@@ -75,6 +75,38 @@ router.get('/review/:id', withAuth, async (req, res) => {
   }
 });
 
+// Get all reviews for a given recipe id
+router.get('/allreviews/:id', withAuth, async (req,res) => {
+  try {
+    const recipeData = await Recipe.findByPk(req.params.id);
+    const recipe = recipeData.get({ plain: true });
+
+    const reviewData = await Review.findAll(
+      {
+        where: {
+          recipe_id: req.params.id
+        }
+      },
+      {
+        include: [
+          {
+            model: Recipe,
+            attribute: ['name']
+          }
+        ]
+      }
+    )
+
+    const reviews = reviewData.map((review) => review.get({ plain: true }));
+    res.render("allreviews", {
+      reviews,
+      logged_in: req.session.logged_in,
+      user_id: req.session.user_id,
+    })
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
