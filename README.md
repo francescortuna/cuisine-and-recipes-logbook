@@ -4,6 +4,8 @@
 
 Our motivation for this project was to create a site with recipes from cuisines around the world. As a user of the site one can view recipes from differnet cousines. Also, you can add your favorite recipe, and leave a review for a specific recipe.
 
+[Cuisine and recipes logbook](https://guarded-basin-90757.herokuapp.com/login)
+
 
 ## Installation
 
