@@ -7,7 +7,11 @@ const addRecipeReviewFormHandler = async (event) => {
   const review_description = document.querySelector("#review-content").value.trim();
   const recipe_id = document.querySelector("#review-content").getAttribute("data-id");
 
-  if (reviewer_score && recipe_id) {
+  if (!reviewer_name) {
+    alert("Please add your name");
+  }
+
+  if (reviewer_score && recipe_id && reviewer_name) {
 
     const response = await fetch("/api/reviews", {
       method: "POST",
@@ -21,7 +25,6 @@ const addRecipeReviewFormHandler = async (event) => {
       alert("failed to add review recipe");
       //alert(response.statusText);
     }
-
     
   }
 
