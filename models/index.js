@@ -1,6 +1,6 @@
-const Cuisine = require("./cuisine");
-const Recipe = require("./recipe");
-const Review = require("./review");
+const Cuisine = require("./Cuisine");
+const Recipe = require("./Recipe");
+const Review = require("./Review");
 const User = require("./User");
 
 Cuisine.hasMany(Recipe, {
