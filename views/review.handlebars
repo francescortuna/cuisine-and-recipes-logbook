@@ -2,15 +2,19 @@
   <div class="col-6">
     <!-- display recipe in a card -->
     <div class="card">
+      <div class="card-header">
+        <h4 class="card-title text-center">{{recipe.name}}</h4>
+      </div>
+      {{#if recipe.filename}}
+        <img class="card-img-top" src="/images/{{recipe.filename}}" alt="{{recipe.name}} image">
+      {{/if}}
       <div class="card-body">
-        <div class="card-header">
-          <h4 class="card-title text-center">{{recipe.name}}</h4>
-        </div>
         <p class="card-text"><strong>Recipe time:</strong>{{recipe.time}}</p>
         <p class="card-text"><strong>Ingredients:</strong> {{recipe.ingredients}}</p>
         <p class="card-text"><strong>Instructions:</strong> {{recipe.instructions}}</p>
       </div>
     </div>
+    <!-- form card -->
     <div class="card">
       <div class="card-body">
         <p>
