@@ -21,8 +21,7 @@ const addRecipeReviewFormHandler = async (event) => {
     });
     if (response.ok) {
       alert("Recipe review added successefully!");
-      //document.location.replace('/');
-      document.location.reload();
+      document.location.replace(`/allreviews/${recipe_id}`);
     } else {
       alert("failed to add review recipe");
       //alert(response.statusText);
