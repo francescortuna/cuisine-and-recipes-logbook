@@ -15,20 +15,21 @@ const addRecipeFormHandler = async (event) => {
     .querySelector("#recipe-name")
     .getAttribute("data-id");
 
-  if (!name) {
-    alert("Please enter recipe name");
-  }
 
-  if (!ingredients) {
-    alert("Please enter recipe ingredients");
-  }
 
-  if (!time) {
-    alert("Please enter recipe time");
-  }
-
-  if (!instructions) {
-    alert("Please enter recipe instructions");
+  let filename;
+  switch (parseInt(cuisine_id)) {
+    case 1: //Mexican cuisine
+      filename = "14-general-Mexican.jpg";
+      break;
+    case 2: //Italian cuisine
+      filename = "15-General-italian.jpg";
+      break;
+    case 3: //Chinese cuisine
+      filename = "13-general-Chinese.jpg";
+      break;
+    default: //Other cuisine
+      filename = "16-general-food.jpg";
   }
 
   if (name && ingredients && time && instructions) {
@@ -39,6 +40,7 @@ const addRecipeFormHandler = async (event) => {
         ingredients,
         time,
         instructions,
+        filename,
         cuisine_id,
         user_id,
       }),
