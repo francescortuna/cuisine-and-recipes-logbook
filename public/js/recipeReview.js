@@ -11,6 +11,7 @@ const addRecipeReviewFormHandler = async (event) => {
     alert("Please add your name");
   }
 
+  // Create recipe review
   if (reviewer_score && recipe_id && reviewer_name) {
 
     const response = await fetch("/api/reviews", {
@@ -20,7 +21,7 @@ const addRecipeReviewFormHandler = async (event) => {
     });
     if (response.ok) {
       alert("Recipe review added successefully!");
-      document.location.replace('/');
+      document.location.replace(`/allreviews/${recipe_id}`);
     } else {
       alert("failed to add review recipe");
       //alert(response.statusText);
